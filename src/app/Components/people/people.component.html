@@ -1,4 +1,4 @@
-<p>people works!</p>
+<!-- <p>people works!</p>
 
 <p>name {{name}}</p>
 <p>height {{height}}</p>
@@ -7,12 +7,35 @@
 {{name|uppercase}}
 {{height|currency}}
 
-hvordan aktiverer jeg javascript herfra dvs. typescript/angular
+hvordan aktiverer jeg javascript herfra dvs. typescript/angular -->
 
 <button (click)="firstFunction()">FirstFunction</button>
 
 <!-- tilgå et objekt -->
 
-<label for="">name</label> {{people.name}}
-<label for="">name</label> {{people}}
+<!-- <label for="">name</label> {{people.name}}
+<label for="">name</label> {{people}} -->
 <!-- <label for="">name</label> {{people|json}} -->
+
+<!-- <div *ngFor="let item of collectionName"></div> -->
+<div *ngFor="let peopleObject of peopleArray">
+{{peopleObject.name}} {{peopleObject.eye_color}}
+
+</div>
+<ul *ngFor="let peopleObject of peopleArray">
+  <li>{{peopleObject.name}}</li>
+</ul>
+
+<h1>dette data er fra vores service <br></h1>
+<div *ngFor="let item of peopleListFromService">
+{{item.name}}
+<!-- {{item.homeworld}} -->
+</div>
+
+<form [formGroup]="peopleForm" (ngSubmit)="createPeople()">
+  <label for="">name      <input formControlName="name" type="text" required name="" id="">  </label> <br>
+  <label for="">height    <input formControlName="height" type="number" name="" id=""> </label> <br>
+  <label for="">eye_color <input formControlName="eye_color" type="text" name="" id=""> </label> <br>
+  <button type="submit">create</button> <button type="submit">delete</button>
+  <button type="submit">update</button> <button type="submit">search</button>
+</form>

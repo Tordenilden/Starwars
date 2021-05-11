@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root', // det HTML tag vi kan få fat i Component med
   templateUrl: './app.component.html', // template
+  //template: `her kan der være flere linjer`
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

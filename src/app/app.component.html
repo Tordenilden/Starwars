@@ -16,5 +16,16 @@ hvis vi vil have fat i variabeler fra ng-component -->
 <p *ngIf="mail == undefined">undefined</p>
 <p *ngIf="mail2 == ''">tom</p> -->
 
-
-<app-people></app-people>
+<!-- Routes skal benyttes i en template -->
+<!-- <> fragments ser vi lige på senere -->
+<!-- routerLink=benytter path fra routing.module.ts -->
+<main>
+<nav>
+  <a routerLink="people" routerLinkActive="active">link til people</a>
+  <a routerLink="menu1" routerLinkActive="active"> Menu1</a>
+  <a routerLink="menu2" routerLinkActive="active"> Menu2</a>
+</nav>
+<router-outlet></router-outlet>
+</main>
+<!-- <app-people></app-people> -->
+<!-- </> -->
